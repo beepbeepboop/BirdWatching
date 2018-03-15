@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         findViewById(R.id.LoginButton).setOnClickListener(this);
+        findViewById(R.id.SignUpButton).setOnClickListener(this);
 
         Toast.makeText(getApplicationContext(),"Hello and Welcome!",Toast.LENGTH_SHORT).show();
 
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.LoginButton:
                 startActivity(new Intent(this, HomePageActivity.class));
+                break;
 
             }
         }
