@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.noahd.birdwatching.SignUpActivity">
+    tools:context="com.example.noahd.birdwatching.SignUpActivity"
+    android:background="@drawable/signupbirb"
+
+    android:id="@+id/relativeLayout">
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="273dp"
         android:layout_height="46dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Here you can sign up for           Bird Watching!"
         android:textAlignment="center"
@@ -21,8 +22,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintVertical_bias="0.016"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/SignUpPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Your Password"
+        android:textColorHint="#ffffff"
+        android:layout_marginBottom="196dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/SignUpUN"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textColorHint="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288" />
+
+    <Button
+        android:id="@+id/CreateUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="375dp" />
+
+</android.support.constraint.ConstraintLayout>
 
 
