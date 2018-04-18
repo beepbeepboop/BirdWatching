@@ -32,12 +32,13 @@
         android:id="@+id/SignUpPW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Your Password"
-        android:textColorHint="#ffffff"
-        android:layout_marginBottom="196dp"
+        android:layout_marginBottom="248dp"
         android:ems="10"
+        android:hint="Your Password"
         android:inputType="textPassword"
+        android:textColorHint="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 

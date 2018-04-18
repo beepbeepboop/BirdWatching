@@ -11,9 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Snackbar.make(view, "Welcome here! Lets have some fun!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
+
         });
 
 
