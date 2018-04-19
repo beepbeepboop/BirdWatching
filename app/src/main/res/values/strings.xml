@@ -9,4 +9,5 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_home_page">HomePageActivity</string>
+    <string name="title_activity_bird_info">BirdInfoActivity</string>
 </resources>

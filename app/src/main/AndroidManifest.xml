@@ -23,7 +23,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".HomePageActivity"></activity>
+        <activity android:name=".HomePageActivity" />
+        <activity
+            android:name=".BirdInfoActivity"
+            android:label="@string/title_activity_bird_info"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
