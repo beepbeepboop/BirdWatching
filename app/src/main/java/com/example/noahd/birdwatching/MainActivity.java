@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     FirebaseAuth mAuth;
     EditText SignUpUN, SignUpPW;
     ProgressBar createProgress;
+    ImageView frontpagePic;
 
 
     @Override
@@ -35,21 +37,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Welcome here! Lets have some fun!", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-
-        });
 
         mAuth = FirebaseAuth.getInstance();
 
         SignUpUN = (EditText) findViewById(R.id.SignUpUN);
         SignUpPW = (EditText) findViewById(R.id.SignUpPW);
         createProgress = (ProgressBar) findViewById(R.id.createProgress);
+
+
+
+        frontpagePic = (ImageView) findViewById(R.id.frontpagePic);
+
+        int imageResource = getResources().getIdentifier("@drawable/birbo", null, this.getPackageName());
+        frontpagePic.setImageResource(imageResource);
 
         findViewById(R.id.LoginButton).setOnClickListener(this);
         findViewById(R.id.SignUpButton).setOnClickListener(this);
