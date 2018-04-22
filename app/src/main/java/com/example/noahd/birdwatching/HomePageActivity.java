@@ -59,7 +59,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.currentBirbs:
-                startActivity(new Intent(this,BirdInfoActivity.class ));
+                startActivity(new Intent(this,birdObservations.class ));
                 break;
 
 
