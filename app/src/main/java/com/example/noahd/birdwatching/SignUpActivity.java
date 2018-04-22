@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
@@ -83,9 +84,17 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                 if(task.isSuccessful()){
                     createProgress.setVisibility(View.GONE);
-                    Toast.makeText(getApplicationContext(),"User Reqistered!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(SignUpActivity.this, HomePageActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
                 } else {
-                    Toast.makeText(getApplicationContext(), "Failed to register", Toast.LENGTH_SHORT).show();
+
+                    if(task.getException() instanceof FirebaseAuthUserCollisionException) {
+                        Toast.makeText(getApplicationContext(), "You are already registered", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), task.getException().getMessage(),  Toast.LENGTH_SHORT).show();
+                    }
+
                 }
 
             }

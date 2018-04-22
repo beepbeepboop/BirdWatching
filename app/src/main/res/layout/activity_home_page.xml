@@ -6,62 +6,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomePageActivity"
+    android:id="@+id/drawer"
     android:background="@drawable/backgroundblue">
+
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <Button
-            android:id="@+id/birdInfo"
-            android:layout_width="174dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/currentBirbs"
+            android:layout_width="244dp"
+            android:layout_height="62dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@null"
             android:text="Observations"
-            android:textSize="20sp"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.341" />
+            app:layout_constraintVertical_bias="0.357" />
 
         <Button
-            android:id="@+id/addBird"
-            android:layout_width="196dp"
-            android:layout_height="43dp"
+            android:id="@+id/addBirbs"
+            android:layout_width="276dp"
+            android:layout_height="78dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="292dp"
             android:background="@null"
             android:text="Add Observation"
-            android:textSize="20sp"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.013" />
+            app:layout_constraintVertical_bias="0.191" />
 
         <TextView
             android:id="@+id/homePageText"
-            android:layout_width="196dp"
-            android:layout_height="54dp"
+            android:layout_width="233dp"
+            android:layout_height="57dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Welcome!"
+            android:text="Bird Watching"
             android:textColor="@color/white"
-            android:textSize="43sp"
+            android:textSize="36sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.118" />
+            app:layout_constraintVertical_bias="0.117" />
+
+        <ImageView
+            android:id="@+id/BgBirb"
+            android:layout_width="243dp"
+            android:layout_height="194dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+             />
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
@@ -73,16 +95,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                android:theme="@style/AppTheme.NoActionBar"/>
 
         </android.support.design.widget.AppBarLayout>
 
-
     </android.support.constraint.ConstraintLayout>
 
-
-
     <android.support.design.widget.NavigationView
+
 
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -90,12 +111,10 @@
         app:itemTextColor="@color/black"
         app:itemIconTint="@color/darkgray"
         app:menu="@menu/drawermenu"
+        app:headerLayout="@layout/header"
         android:layout_gravity="start">
 
     </android.support.design.widget.NavigationView>
-
-
-
 
 
 </android.support.v4.widget.DrawerLayout>

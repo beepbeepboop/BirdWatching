@@ -10,4 +10,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_home_page">HomePageActivity</string>
     <string name="title_activity_bird_info">BirdInfoActivity</string>
+
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
