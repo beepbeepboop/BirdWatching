@@ -152,7 +152,7 @@ public class birdObservations extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            ListAdapter adapter = new SimpleAdapter(BirdCatalog.this, birdList,
+            ListAdapter adapter = new SimpleAdapter(birdObservations.this, birdlistArray,
                     R.layout.rowlist, new String[]{"id", "DanishName", "EnglishName"},
                     new int[]{R.id.id, R.id.DanishName, R.id.EnglishName});
             birdListView.setAdapter(adapter);
