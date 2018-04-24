@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SignUpUN = (EditText) findViewById(R.id.SignUpUN);
         SignUpPW = (EditText) findViewById(R.id.SignUpPW);
         createProgress = (ProgressBar) findViewById(R.id.createProgress);
-
-
-
         frontpagePic = (ImageView) findViewById(R.id.frontpagePic);
 
         int imageResource = getResources().getIdentifier("@drawable/birbo", null, this.getPackageName());
