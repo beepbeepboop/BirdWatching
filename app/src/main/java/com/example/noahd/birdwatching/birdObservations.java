@@ -2,6 +2,7 @@ package com.example.noahd.birdwatching;
 
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -11,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -26,11 +28,11 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class birdObservations extends AppCompatActivity {
+public class birdObservations extends AppCompatActivity implements View.OnClickListener {
 
 
 
-
+    Button backbutton;
     DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mToggle;
 
@@ -38,10 +40,6 @@ public class birdObservations extends AppCompatActivity {
     private String TAG = MainActivity.class.getSimpleName();
     private ListView birdListView;
     ArrayList<HashMap<String, String>> birdlistArray;
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,20 +49,32 @@ public class birdObservations extends AppCompatActivity {
         setSupportActionBar(toolbar);
         mDrawerlayout = (DrawerLayout) findViewById(R.id.drawer);
         birdListView = (ListView) findViewById(R.id.birdList);
+        backbutton = (Button) findViewById(R.id.backBtn);
+
+        findViewById(R.id.backBtn).setOnClickListener(this);
+
+
 
 
         new GetBirdList().execute();
-
-
         birdListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-
             }
         });
-
         birdlistArray = new ArrayList<>();
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId()){
+            case R.id.backBtn:
+                startActivity(new Intent(this,HomePageActivity.class ));
+                break;
+
+
+        }
 
     }
 
