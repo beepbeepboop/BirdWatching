@@ -9,7 +9,7 @@
     tools:showIn="@layout/activity_extra_bird_info">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/birdImage"
         android:layout_width="314dp"
         android:layout_height="250dp"
         android:layout_marginBottom="8dp"
