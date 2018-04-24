@@ -84,9 +84,9 @@ public class birdObservations extends AppCompatActivity {
             progressDialog.setMessage("Loading Data...");
             progressDialog.show();
 
-            HttpHandler sh = new HttpHandler();
+            HttpHandler handler = new HttpHandler();
             String baseUrl = "http://birdobservationservice.azurewebsites.net/Service1.svc/birds";
-            String jsonString = sh.makeServiceCall(baseUrl);
+            String jsonString = handler.makeServiceCall(baseUrl);
 
 
 
@@ -103,10 +103,7 @@ public class birdObservations extends AppCompatActivity {
                         String created = o.getString("Created");
                         String photoURL = o.getString("PhotoUrl");
 
-
-
                         HashMap<String, String> bird = new HashMap<>();
-
                         bird.put("id", id);
                         bird.put("DanishName", danishName);
                         bird.put("EnglishName", englishName);
