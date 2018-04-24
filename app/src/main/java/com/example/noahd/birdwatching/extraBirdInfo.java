@@ -42,8 +42,6 @@ public class extraBirdInfo extends AppCompatActivity  {
 
         mDrawerlayout = (DrawerLayout) findViewById(R.id.drawer);
         mToggle = new ActionBarDrawerToggle(this,mDrawerlayout,R.string.open, R.string.close);
-        mDrawerlayout.addDrawerListener(mToggle);
-        mToggle.syncState();
 
 
         Glide.with(this).load(Url).into(imageView);
@@ -61,13 +59,8 @@ public class extraBirdInfo extends AppCompatActivity  {
         @Override
         public void onClick(View view) {
 
-            switch (view.getId()){
-                
-
-            }
-
         }
-    }
+    };
 
 
 

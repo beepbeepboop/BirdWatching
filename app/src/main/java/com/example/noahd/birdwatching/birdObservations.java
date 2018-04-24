@@ -30,8 +30,6 @@ import java.util.HashMap;
 
 public class birdObservations extends AppCompatActivity implements View.OnClickListener {
 
-
-
     Button backbutton;
     DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mToggle;
@@ -54,12 +52,13 @@ public class birdObservations extends AppCompatActivity implements View.OnClickL
         findViewById(R.id.backBtn).setOnClickListener(this);
 
 
-
-
         new GetBirdList().execute();
         birdListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Intent intent = new Intent(birdObservations.this, extraBirdInfo.class);
+                intent.putExtra("bird",birdlistArray.get(position));
+                startActivity(intent);
             }
         });
         birdlistArray = new ArrayList<>();
