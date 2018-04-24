@@ -26,12 +26,13 @@
         <activity android:name=".HomePageActivity" />
         <activity
             android:name=".birdObservations"
-            android:label="@string/title_activity_bird_observations"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".extraBirdInfo"
             android:label="@string/title_activity_extra_bird_info"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+
+        </activity>
     </application>
 
 </manifest>
