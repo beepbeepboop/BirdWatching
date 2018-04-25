@@ -40,10 +40,10 @@ public class yourObservations extends AppCompatActivity {
         String recieveLong = intent.getStringExtra("createLong");
         String recieveLat = intent.getStringExtra("createLat");
 
-        recieve.setText("Current Species is: " + recieveSpecies + "\n" +
-                "Current Time is: " + recieveTime + "\n" +
-                "Current Longtitude is: " + recieveLong + "\n" +
-                "current Latitude is: " + recieveLat + "\n");
+        recieve.setText("Current Species is: " + recieveSpecies + "\n\n" +
+                "Current Time is: " + recieveTime + "\n\n" +
+                "Current Longtitude is: " + recieveLong + "\n\n" +
+                "Current Latitude is: " + recieveLat + "\n\n");
 
 
 
