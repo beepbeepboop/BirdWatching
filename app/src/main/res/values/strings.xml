@@ -18,4 +18,5 @@
     <string name="title_activity_bird_observations">birdObservations</string>
     <string name="title_activity_extra_bird_info">extraBirdInfo</string>
     <string name="title_activity_add_observation">addObservation</string>
+    <string name="title_activity_your_observations">yourObservations</string>
 </resources>

@@ -29,12 +29,16 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".extraBirdInfo"
-            android:label="@string/title_activity_extra_bird_info"
             android:theme="@style/AppTheme">
 
         </activity>
         <activity
             android:name=".addObservation"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity
+            android:name=".yourObservations"
             android:theme="@style/AppTheme">
 
         </activity>
