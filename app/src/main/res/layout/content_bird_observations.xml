@@ -5,7 +5,7 @@
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundblue"
+    android:background="@drawable/backgroundorange"
     tools:context=".birdObservations"
     tools:showIn="@layout/activity_bird_observations">
 
@@ -86,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/blue"
+        android:background="@drawable/backgroundorange"
         app:headerLayout="@layout/header"
         app:itemIconTint="@color/darkgray"
         app:itemTextColor="@color/black"

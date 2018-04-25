@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.noahd.birdwatching.SignUpActivity"
-    android:background="@drawable/signupbirb"
+    android:background="@drawable/backgroundorange"
 
     android:id="@+id/relativeLayout">
 
@@ -35,6 +35,7 @@
         android:layout_marginBottom="260dp"
         android:ems="10"
         android:hint="Your Password"
+        android:gravity="center"
         android:inputType="textPassword"
         android:textColorHint="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,6 +53,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Email"
+        android:gravity="center"
         android:inputType="textEmailAddress"
         android:textColorHint="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -9,7 +9,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.noahd.birdwatching.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:background="@drawable/backgroundblue">
+    android:background="@drawable/backgroundorange">
 
     <ImageView
         android:id="@+id/frontpagePic"
@@ -22,7 +22,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:adjustViewBounds="true"
-        android:background="@drawable/backgroundblue"
+        android:background="@null"
         android:contentDescription="@null"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
