@@ -43,6 +43,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
 
         findViewById(R.id.currentBirbs).setOnClickListener(this);
+        findViewById(R.id.addBirbs).setOnClickListener(this);
 
 
     }
@@ -60,6 +61,10 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()){
             case R.id.currentBirbs:
                 startActivity(new Intent(this,birdObservations.class ));
+                break;
+
+            case R.id.addBirbs:
+                startActivity(new Intent(this, addObservation.class));
                 break;
 
 
