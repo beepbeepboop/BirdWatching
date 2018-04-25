@@ -33,10 +33,18 @@ public class yourObservations extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        String recieve1 = intent.getExtras().getString("createObs");
+        String recieve1 = intent.getStringExtra("createOb");
         recieve.setText(recieve1);
 
-      //  recieve.setText(getIntent().getStringExtra("createObs"));
+
+
+
+
+        //   Bundle extras = getIntent().getExtras();
+
+     //  recieve.setText(recieve1);
+
+    //   recieve.setText(getIntent().getStringExtra("createOb"));
 
     }
 
