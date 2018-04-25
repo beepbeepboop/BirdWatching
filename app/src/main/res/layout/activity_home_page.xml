@@ -48,14 +48,14 @@
 
         <Button
             android:id="@+id/addBirbs"
-            android:layout_width="276dp"
+            android:layout_width="293dp"
             android:layout_height="78dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="292dp"
             android:background="@null"
-            android:text="Add Observation"
+            android:text="Make Observation"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
