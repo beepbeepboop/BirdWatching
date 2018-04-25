@@ -1,5 +1,6 @@
 package com.example.noahd.birdwatching;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +15,7 @@ public class yourObservations extends AppCompatActivity {
     TextView recieve;
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +35,15 @@ public class yourObservations extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        String recieve1 = intent.getStringExtra("createOb");
-        recieve.setText(recieve1);
+        String recieveSpecies = intent.getStringExtra("createSpecies");
+        String recieveTime = intent.getStringExtra("createTimes");
+        String recieveLong = intent.getStringExtra("createLong");
+        String recieveLat = intent.getStringExtra("createLat");
+
+        recieve.setText("Current Species is: " + recieveSpecies + "\n" +
+                "Current Time is: " + recieveTime + "\n" +
+                "Current Longtitude is: " + recieveLong + "\n" +
+                "current Latitude is: " + recieveLat + "\n");
 
 
 

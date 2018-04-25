@@ -40,10 +40,10 @@ public class addObservation extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
 
         Intent intent = new Intent(this, yourObservations.class);
-       intent.putExtra("createOb", species.getText().toString());
-       intent.putExtra("createOb", times.getText().toString());
-       intent.putExtra("createOb", longtitude.getText().toString());
-       intent.putExtra("createOb", latitude.getText().toString());
+       intent.putExtra("createSpecies", species.getText().toString());
+       intent.putExtra("createTimes", times.getText().toString());
+       intent.putExtra("createLong", longtitude.getText().toString());
+       intent.putExtra("createLat", latitude.getText().toString());
        startActivity(intent);
 
     }
