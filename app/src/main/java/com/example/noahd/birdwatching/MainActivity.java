@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         findViewById(R.id.ExitBtn).setOnClickListener(this);
+        findViewById(R.id.SkipBtn).setOnClickListener(this);
         Toast.makeText(getApplicationContext(),"Hello and Welcome!",Toast.LENGTH_SHORT).show();
 
 
@@ -136,6 +137,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.ExitBtn:
                 finish();
                 System.exit(0);
+
+            case R.id.SkipBtn:
+                startActivity(new Intent(this,HomePageActivity.class ));
+                break;
 
             }
         }
