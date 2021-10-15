@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/db" android:title="Dashboard" />
+    <item android:id="@+id/newObs" android:title="New Observation" />
+    <item android:id="@+id/manage" android:title="Manage Observations" />
+    <item android:id="@+id/settings" android:title="Settings" />
+    <item android:id="@+id/logout" android:title="Log Out"/>
+
+
+</menu>

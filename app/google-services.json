@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "409717670771",
+    "firebase_url": "https://birdwatching-af4a7.firebaseio.com",
+    "project_id": "birdwatching-af4a7",
+    "storage_bucket": "birdwatching-af4a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409717670771:android:0fec48d3873ca341",
+        "android_client_info": {
+          "package_name": "com.example.noahd.birdwatching"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409717670771-1htgvs4q0ig5kfoku38p1ut4nd5jsivq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.noahd.birdwatching",
+            "certificate_hash": "849b76d15b889a87258890c52bbe5b715a0e8872"
+          }
+        },
+        {
+          "client_id": "409717670771-5psl2sbe0huahg019ppvuup0dfo1cthk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADiN6O_Fc6oruDTdUazgeMV2V7IkceqeU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409717670771-5psl2sbe0huahg019ppvuup0dfo1cthk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
