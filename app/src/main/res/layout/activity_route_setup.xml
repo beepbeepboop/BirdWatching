@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.noahd.birdwatching.addObservation">
 
-    <include layout="@layout/content_add_observation" />
+    <include layout="@layout/content_route_setup" />
 
 </android.support.design.widget.CoordinatorLayout>
