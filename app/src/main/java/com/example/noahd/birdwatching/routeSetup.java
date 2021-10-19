@@ -1,11 +1,13 @@
 package com.example.noahd.birdwatching;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -18,11 +20,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class routeSetup extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener, DatePickerDialog.OnDateSetListener {
+public class routeSetup extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener, DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
     EditText species;
     EditText times;
@@ -47,10 +50,20 @@ public class routeSetup extends AppCompatActivity implements View.OnClickListene
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
+
         findViewById(R.id.calendarButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDatePickerDialog();
+            }
+        });
+
+        TextView startTimeTextViewButton = findViewById(R.id.startTimeSelector);
+        startTimeTextViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment timePicker = new timePickerFragment();
+                timePicker.show(getSupportFragmentManager(), "time picker");
             }
         });
 
@@ -131,5 +144,21 @@ public class routeSetup extends AppCompatActivity implements View.OnClickListene
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         String date = "Date: " + dayOfMonth + "/" + month + "/" + year;
         dateText.setText(date);
+    }
+
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        TextView textView = (TextView) findViewById(R.id.startTimeSelector);
+        String strTemp = new String();
+        if(hourOfDay < 10)
+            strTemp = "0" + Integer.toString(hourOfDay) + ":";
+        else
+            strTemp = Integer.toString(hourOfDay) + ":";
+
+        if(minute < 10)
+            strTemp = strTemp + "0" + Integer.toString(minute);
+        else
+            strTemp = strTemp + Integer.toString(minute);
+        textView.setText(strTemp);
     }
 }

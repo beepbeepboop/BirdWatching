@@ -115,6 +115,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:clickable="true"
             android:text="00:00"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@color/black"
@@ -129,8 +130,8 @@
 
         <TextView
             android:id="@+id/startKMText"
-            android:layout_width="271dp"
-            android:layout_height="33dp"
+            android:layout_width="203dp"
+            android:layout_height="87dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
@@ -144,10 +145,10 @@
             app:fontFamily="serif-monospace"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.029"
+            app:layout_constraintHorizontal_bias="0.01"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
-            app:layout_constraintVertical_bias="0.767" />
+            app:layout_constraintVertical_bias="0.432" />
 
         <TextView
             android:id="@+id/peopleInCarText"
@@ -194,67 +195,6 @@
             app:layout_constraintVertical_bias="0.065" />
 
         <EditText
-            android:id="@+id/latitudeEdit"
-            android:layout_width="353dp"
-            android:layout_height="46dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Latitude"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
-            app:layout_constraintVertical_bias="0.55" />
-
-        <EditText
-            android:id="@+id/timeEdit"
-            android:layout_width="353dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
-            app:layout_constraintVertical_bias="0.424" />
-
-        <EditText
-            android:id="@+id/longtitudeEdit"
-            android:layout_width="353dp"
-            android:layout_height="46dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Longtitude"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
-            app:layout_constraintVertical_bias="0.623" />
-
-        <EditText
             android:id="@+id/numcarsEdit"
             android:layout_width="72dp"
             android:layout_height="35dp"
@@ -272,19 +212,36 @@
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
             app:layout_constraintVertical_bias="0.187" />
 
+        <EditText
+            android:id="@+id/numKMEdit"
+            android:layout_width="124dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.424"
+            app:layout_constraintStart_toEndOf="@+id/startKMText"
+            app:layout_constraintTop_toBottomOf="@+id/startTimeSelector"
+            app:layout_constraintVertical_bias="0.093" />
+
         <Button
             android:id="@+id/createOb"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             android:background="@null"
             android:onClick="onClick"
-            android:text="Create Observation!"
+            android:text="Begin Survey!"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.962"
@@ -336,12 +293,10 @@
             android:layout_width="50dp"
             android:layout_height="43dp"
             android:src="@drawable/ic_calendar"
-            app:layout_constraintBottom_toTopOf="@+id/timeEdit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.064"
             app:layout_constraintStart_toEndOf="@+id/dateText"
-            app:layout_constraintTop_toBottomOf="@+id/peopleInCarText"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/peopleInCarText" />
 
     </android.support.constraint.ConstraintLayout>
 
