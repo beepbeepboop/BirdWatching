@@ -1,5 +1,6 @@
 package com.example.noahd.birdwatching;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,13 +12,17 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class addObservation extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+import java.util.Calendar;
+
+public class routeSetup extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener, DatePickerDialog.OnDateSetListener {
 
     EditText species;
     EditText times;
@@ -25,6 +30,7 @@ public class addObservation extends AppCompatActivity implements View.OnClickLis
     Button createObser;
     ImageView cameraImage;
     ImageButton addImage;
+    private TextView dateText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +39,7 @@ public class addObservation extends AppCompatActivity implements View.OnClickLis
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        dateText = findViewById(R.id.dateText);
         Spinner spinner = findViewById(R.id.routeSpinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.numbers, android.R.layout.simple_spinner_item);
@@ -40,9 +47,16 @@ public class addObservation extends AppCompatActivity implements View.OnClickLis
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
+        findViewById(R.id.calendarButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
+            }
+        });
+
 
         // Handles Specifics
-        species = (EditText) findViewById(R.id.speciesEdit);
+        species = (EditText) findViewById(R.id.numcarsEdit);
         times = (EditText) findViewById(R.id.timeEdit);
         longtitude = (EditText) findViewById(R.id.longtitudeEdit);
         latitude = (EditText) findViewById(R.id.latitudeEdit);
@@ -69,6 +83,16 @@ public class addObservation extends AppCompatActivity implements View.OnClickLis
 
         }
 
+    public void showDatePickerDialog(){
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this,
+                this,
+                Calendar.getInstance().get(Calendar.YEAR),
+                Calendar.getInstance().get(Calendar.MONTH),
+                Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
+        datePickerDialog.show();
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -86,7 +110,7 @@ public class addObservation extends AppCompatActivity implements View.OnClickLis
        intent.putExtra("createLat", latitude.getText().toString());
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.ic_menu_camera);
 
-        intent.setClass(addObservation.this,yourObservations.class);
+        intent.setClass(routeSetup.this,yourObservations.class);
         intent.putExtra("Bitmap",bitmap);
        startActivity(intent);
 
@@ -101,5 +125,11 @@ public class addObservation extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        String date = "Date: " + dayOfMonth + "/" + month + "/" + year;
+        dateText.setText(date);
     }
 }

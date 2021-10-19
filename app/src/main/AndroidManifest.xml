@@ -33,7 +33,7 @@
 
         </activity>
         <activity
-            android:name=".addObservation"
+            android:name=".routeSetup"
             android:theme="@style/AppTheme">
 
         </activity>
