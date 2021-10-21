@@ -4,7 +4,6 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.DialogFragment;
@@ -70,9 +69,7 @@ public class routeSetup extends AppCompatActivity implements View.OnClickListene
 
         // Handles Specifics
         species = (EditText) findViewById(R.id.numcarsEdit);
-        times = (EditText) findViewById(R.id.timeEdit);
-        longtitude = (EditText) findViewById(R.id.longtitudeEdit);
-        latitude = (EditText) findViewById(R.id.latitudeEdit);
+
 
          // Handles Camera Function
         cameraImage = (ImageView) findViewById(R.id.cameraView);
@@ -116,15 +113,15 @@ public class routeSetup extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(this, yourObservations.class);
-       intent.putExtra("createSpecies", species.getText().toString());
-       intent.putExtra("createTimes", times.getText().toString());
-       intent.putExtra("createLong", longtitude.getText().toString());
-       intent.putExtra("createLat", latitude.getText().toString());
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.ic_menu_camera);
-
-        intent.setClass(routeSetup.this,yourObservations.class);
-        intent.putExtra("Bitmap",bitmap);
+        Intent intent = new Intent(this, yourSurvey.class);
+//       intent.putExtra("createSpecies", species.getText().toString());
+//       intent.putExtra("createTimes", times.getText().toString());
+//       intent.putExtra("createLong", longtitude.getText().toString());
+//       intent.putExtra("createLat", latitude.getText().toString());
+//        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.ic_menu_camera);
+//
+//        intent.setClass(routeSetup.this,yourObservations.class);
+//        intent.putExtra("Bitmap",bitmap);
        startActivity(intent);
 
     }

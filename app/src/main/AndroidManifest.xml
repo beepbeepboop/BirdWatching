@@ -38,7 +38,7 @@
 
         </activity>
         <activity
-            android:name=".yourObservations"
+            android:name=".yourSurvey"
             android:theme="@style/AppTheme">
 
         </activity>
