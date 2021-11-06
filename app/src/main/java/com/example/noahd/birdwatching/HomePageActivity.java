@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class HomePageActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -58,7 +59,8 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.currentBirbs:
-                startActivity(new Intent(this,birdObservations.class ));
+                Toast.makeText(view.getContext(), "This feature is coming soon! :D", Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(this,birdObservations.class ));
                 break;
 
             case R.id.addBirbs:

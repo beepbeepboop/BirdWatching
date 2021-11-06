@@ -20,11 +20,11 @@
     <string name="title_activity_add_observation">addObservation</string>
     <string name="title_activity_your_observations">yourObservations</string>
 
-    <string-array name="numbers">
-        <item>One</item>
-        <item>Two</item>
-        <item>Three</item>
-        <item>Four</item>
-        <item>Five</item>
+    <string-array name="routeNames">
+        <item>Garden Route Trail 74</item>
+        <item>Philadelphia N7</item>
+        <item>Paardenberg Mountain</item>
+        <item>Tulbagh Valley</item>
+        <item>Kleinberg Circle</item>
     </string-array>
 </resources>

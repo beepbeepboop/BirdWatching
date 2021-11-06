@@ -44,7 +44,7 @@ public class routeSetup extends AppCompatActivity implements View.OnClickListene
         dateText = findViewById(R.id.dateText);
         Spinner spinner = findViewById(R.id.routeSpinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.numbers, android.R.layout.simple_spinner_item);
+                R.array.routeNames, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);

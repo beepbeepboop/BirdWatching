@@ -24,7 +24,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-public class yourSurvey extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class yourSurvey extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     private ListView listView;
     private ListAdapter listAdapter;
@@ -54,11 +54,11 @@ public class yourSurvey extends AppCompatActivity implements AdapterView.OnItemS
     }
 
     public void getProduct() {
-        products.add(new Products("Video Recorder",10.0d,R.mipmap.camera));
-        products.add(new Products("Camera",11.0d,R.mipmap.camera_1));
-        products.add(new Products("Floppy",12.0d,R.mipmap.floppy));
-        products.add(new Products("Game Pad",13.0d,R.mipmap.game_controller));
-        products.add(new Products("Graphics Card",14.0d,R.mipmap.graphics_card));
+        products.add(new Products("Pigeon",10.0d,R.mipmap.pigeon));
+        products.add(new Products("Peacock",11.0d,R.mipmap.peacock));
+        products.add(new Products("Eagle",12.0d,R.mipmap.eagle));
+        products.add(new Products("Hadeda",13.0d,R.mipmap.hadeda));
+        products.add(new Products("Cow",14.0d,R.mipmap.cow));
         products.add(new Products("HDMI Cable",16.0d,R.mipmap.hdmi));
         products.add(new Products("Headphones",11.0d,R.mipmap.headphones));
         products.add(new Products("I Mac",15.0d,R.mipmap.imac));
@@ -96,6 +96,7 @@ public class yourSurvey extends AppCompatActivity implements AdapterView.OnItemS
         setContentView(R.layout.activity_your_observations);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Button completeSurvey = (Button) findViewById(R.id.btnPlaceOrder);
 
         //list code
         getProduct();
@@ -113,7 +114,7 @@ public class yourSurvey extends AppCompatActivity implements AdapterView.OnItemS
 
         Spinner spinner = findViewById(R.id.routeSpinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.numbers, android.R.layout.simple_spinner_item);
+                R.array.routeNames, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
@@ -121,6 +122,8 @@ public class yourSurvey extends AppCompatActivity implements AdapterView.OnItemS
 
         recieve = (TextView) findViewById(R.id.recieve);
 //        cameraImageView = (ImageView) findViewById(R.id.cameraImageView);
+
+        findViewById(R.id.btnPlaceOrder).setOnClickListener(this);
 
 
         Intent intent = getIntent();
@@ -158,5 +161,17 @@ public class yourSurvey extends AppCompatActivity implements AdapterView.OnItemS
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btnPlaceOrder:
+                Toast.makeText(view.getContext(), "Survey Completed, saved to storage", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, HomePageActivity.class));
+                break;
+
+
+        }
     }
 }

@@ -40,11 +40,12 @@
         android:id="@+id/tvPrice"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:gravity="center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/ivProduct"
         app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
 

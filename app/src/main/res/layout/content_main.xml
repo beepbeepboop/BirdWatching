@@ -9,7 +9,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.noahd.birdwatching.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:background="@drawable/backgroundorange">
+    android:background="@drawable/backgroundbirds">
 
     <TextView
         android:id="@+id/textView2"
